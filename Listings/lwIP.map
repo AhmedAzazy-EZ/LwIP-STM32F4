@@ -1045,20 +1045,6 @@ Section Cross References
     lwip.o(.ARM.exidx.text.LwIP_DHCP_Process_Handle) refers to lwip.o(.text.LwIP_DHCP_Process_Handle) for [Anonymous Symbol]
     lwip.o(.text.Time_Update) refers to lwip.o(.bss.LocalTime) for LocalTime
     lwip.o(.ARM.exidx.text.Time_Update) refers to lwip.o(.text.Time_Update) for [Anonymous Symbol]
-    startup_stm32f446xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
-    startup_stm32f446xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
-    startup_stm32f446xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
-    startup_stm32f446xx.o(RESET) refers to startup_stm32f446xx.o(STACK) for __initial_sp
-    startup_stm32f446xx.o(RESET) refers to startup_stm32f446xx.o(.text) for Reset_Handler
-    startup_stm32f446xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
-    startup_stm32f446xx.o(.text) refers to system_stm32f4xx.o(.text.SystemInit) for SystemInit
-    startup_stm32f446xx.o(.text) refers to __main.o(!!!main) for __main
-    startup_stm32f446xx.o(.text) refers to startup_stm32f446xx.o(HEAP) for Heap_Mem
-    startup_stm32f446xx.o(.text) refers to startup_stm32f446xx.o(STACK) for Stack_Mem
-    system_stm32f4xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32f4xx.o(.text.SystemInit) for [Anonymous Symbol]
-    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data.SystemCoreClock) for SystemCoreClock
-    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.rodata.AHBPrescTable) for AHBPrescTable
-    system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
     stm32f4xx_hal.o(.text.HAL_Init) refers to stm32f4xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
     stm32f4xx_hal.o(.text.HAL_Init) refers to stm32f4xx_hal.o(.text.HAL_InitTick) for HAL_InitTick
     stm32f4xx_hal.o(.text.HAL_Init) refers to stm32f4xx_hal.o(.text.HAL_MspInit) for HAL_MspInit
@@ -1448,6 +1434,20 @@ Section Cross References
     stm32f4xx_hal_spi.o(.text.SPI_CloseTx_ISR) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
     stm32f4xx_hal_spi.o(.text.SPI_CloseTx_ISR) refers to stm32f4xx_hal_spi.o(.text.HAL_SPI_TxCpltCallback) for HAL_SPI_TxCpltCallback
     stm32f4xx_hal_spi.o(.ARM.exidx.text.SPI_CloseTx_ISR) refers to stm32f4xx_hal_spi.o(.text.SPI_CloseTx_ISR) for [Anonymous Symbol]
+    startup_stm32f446xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f446xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f446xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f446xx.o(RESET) refers to startup_stm32f446xx.o(STACK) for __initial_sp
+    startup_stm32f446xx.o(RESET) refers to startup_stm32f446xx.o(.text) for Reset_Handler
+    startup_stm32f446xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f446xx.o(.text) refers to system_stm32f4xx.o(.text.SystemInit) for SystemInit
+    startup_stm32f446xx.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f446xx.o(.text) refers to startup_stm32f446xx.o(HEAP) for Heap_Mem
+    startup_stm32f446xx.o(.text) refers to startup_stm32f446xx.o(STACK) for Stack_Mem
+    system_stm32f4xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32f4xx.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
     rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
     rt_memclr.o(.text) refers to rt_memclr_w.o(.text) for _memset_w
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
@@ -2150,13 +2150,6 @@ Removing Unused input sections from the image.
     Removing lwip.o(.bss.gnetif), (56 bytes).
     Removing lwip.o(.bss.DHCP_state), (1 bytes).
     Removing lwip.o(.bss.LocalTime), (4 bytes).
-    Removing system_stm32f4xx.o(.text), (0 bytes).
-    Removing system_stm32f4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
-    Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (126 bytes).
-    Removing system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
-    Removing system_stm32f4xx.o(.data.SystemCoreClock), (4 bytes).
-    Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
-    Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
     Removing stm32f4xx_hal.o(.text), (0 bytes).
     Removing stm32f4xx_hal.o(.text.HAL_Init), (46 bytes).
     Removing stm32f4xx_hal.o(.ARM.exidx.text.HAL_Init), (8 bytes).
@@ -2564,5 +2557,12 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_hal_spi.o(.ARM.exidx.text.SPI_RxISR_16BITCRC), (8 bytes).
     Removing stm32f4xx_hal_spi.o(.text.SPI_CloseTx_ISR), (150 bytes).
     Removing stm32f4xx_hal_spi.o(.ARM.exidx.text.SPI_CloseTx_ISR), (8 bytes).
+    Removing system_stm32f4xx.o(.text), (0 bytes).
+    Removing system_stm32f4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (126 bytes).
+    Removing system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f4xx.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
+    Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
 
 997 unused section(s) (total 72729 bytes) removed from the image.

@@ -1,9 +1,11 @@
 ./objects/lwip.o: lwip.c RTE\_Target_1\Pre_Include_Global.h \
   lwip_1_4_1(Source\ Code)\src\include\lwip\mem.h \
-  lwip_1_4_1(Source\ Code)\src\include\lwip\opt.h D:\Lwip\ Test\lwipopts.h \
+  lwip_1_4_1(Source\ Code)\src\include\lwip\opt.h \
+  ..\LwIP-STM32F4\lwipopts.h \
   lwip_1_4_1(Source\ Code)\src\include\lwip\debug.h \
-  lwip_1_4_1(Source\ Code)\src\include\lwip\arch.h D:\Lwip\ Test\arch\cc.h \
-  D:\Lwip\ Test\arch\cpu.h lwip_1_4_1(Source\ Code)\src\include\lwip\opt.h \
+  lwip_1_4_1(Source\ Code)\src\include\lwip\arch.h \
+  ..\LwIP-STM32F4\arch\cc.h ..\LwIP-STM32F4\arch\cpu.h \
+  lwip_1_4_1(Source\ Code)\src\include\lwip\opt.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   lwip_1_4_1(Source\ Code)\src\include\lwip\memp.h \
   lwip_1_4_1(Source\ Code)\src\include\lwip\memp_std.h \
@@ -19,7 +21,7 @@
   lwip_1_4_1(Source\ Code)\src\include\lwip\udp.h \
   lwip_1_4_1(Source\ Code)\src\include\netif\etharp.h \
   lwip_1_4_1(Source\ Code)\src\include\lwip\dhcp.h \
-  D:\Lwip\ Test\ethernetif.h D:\Lwip\ Test\main.h \
+  ..\LwIP-STM32F4\ethernetif.h ..\LwIP-STM32F4\main.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h \
@@ -50,4 +52,4 @@
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
-  D:\Lwip\ Test\lwip.h
+  ..\LwIP-STM32F4\lwip.h

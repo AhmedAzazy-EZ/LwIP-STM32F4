@@ -1,8 +1,8 @@
 ./objects/enc28j60.o: enc28j60.c RTE\_Target_1\Pre_Include_Global.h \
-  D:\Lwip\ Test\enc28j60.h \
+  ..\LwIP-STM32F4\enc28j60.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h D:\Lwip\ Test\main.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\LwIP-STM32F4\main.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h \
   C:\Users\RAZER\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h \
