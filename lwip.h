@@ -36,7 +36,7 @@
  extern "C" {
 #endif
 
-#define USE_DHCP
+//#define USE_DHCP
 
 #define ETH_INIT_FLAG           0x01 /* Ethernet Init Flag */
 #define ETH_LINK_FLAG           0x10 /* Ethernet Link Flag */
