@@ -38,47 +38,6 @@ void tcp_request(struct ip_addr * ip_addr , struct tcp_pcb * my_pcb)
 	}
 }
 
-
-void  tcp_error_callback(void *arg, err_t err)
-{
-	
-	//the err_t indicates the error reason e.g
-	//ERR_ABRT: aborted through tcp_abort or by a TCP timer 
-	//ERR_RST: the connection was reset by the remote host
-	
-}
-
-
-err_t tcp_receive_callback(void *arg, struct tcp_pcb *tpcb,
-                             struct pbuf *p, err_t err)
-	{
-		if(p == NULL)
-		{
-			//Error happened , return
-		}
-		else
-		{
-			strncpy(raw_buffer , (char *)p->payload , 2000);
-		}
-		
-		if(tcp_close(tpcb) == ERR_OK)
-			Is_connected = 0;
-		
-		return err;
-	}
-	
-
-
-/**
- * This function is called when the sent
- * data have been acknowledged by the host
- */ 	
-err_t tcp_sent_callback(void *arg, struct tcp_pcb *tpcb,
-                              u16_t len)
-{
-	
-}
-
 /**
  * This function is called when a connection
  * has been established successfully
@@ -110,4 +69,44 @@ uint32_t tcp_send_packet(struct tcp_pcb *tpcb)
         return 1;
     }
     return 0;
+}
+
+
+err_t tcp_receive_callback(void *arg, struct tcp_pcb *tpcb,
+                             struct pbuf *p, err_t err)
+	{
+		if(p == NULL)
+		{
+			//Error happened , return
+		}
+		else
+		{
+			strncpy(raw_buffer , (char *)p->payload , 2000);
+		}
+		
+		if(tcp_close(tpcb) == ERR_OK)
+			Is_connected = 0;
+		
+		return err;
+	}
+
+	
+void  tcp_error_callback(void *arg, err_t err)
+{
+	
+	//the err_t indicates the error reason e.g
+	//ERR_ABRT: aborted through tcp_abort or by a TCP timer 
+	//ERR_RST: the connection was reset by the remote host
+	
+}	
+
+
+/**
+ * This function is called when the sent
+ * data have been acknowledged by the host
+ */ 	
+err_t tcp_sent_callback(void *arg, struct tcp_pcb *tpcb,
+                              u16_t len)
+{
+	
 }
