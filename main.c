@@ -1,3 +1,11 @@
+/*
+ * maint.c
+ *
+ * Created: 29-March-23
+ *  Author: Ahmed Azazy
+ */
+
+
 /* Imortant links 
  *https://lwip.fandom.com/wiki/LwIP_Application_Developers_Manual
  *https://www.nongnu.org/lwip/2_1_x/group__httpd.html#gac364305cee969a0be43c071722b136e6
@@ -5,15 +13,18 @@
 
 
 #include <stdlib.h>
-#include "lwip.h"
 #include "stm32f4xx_hal.h"
+#include "lwip.h"
+#include "lwip/ip_addr.h"
+#include "tcp_client.h"
 
 HAL_StatusTypeDef GPIO_Init(void);
 HAL_StatusTypeDef SPI1_Init(void);
 
 SPI_HandleTypeDef hspi1;
 
-
+struct ip_addr ip;
+struct tcp_pcb my_pcb ;
 
 int main(void)
 {
@@ -27,13 +38,16 @@ int main(void)
 		while(1);
 	}
 	
-	LwIP_Init();
+	//Local Server
+	IP4_ADDR(&ip, 192,168,1,7);
 	
+	LwIP_Init();
+	tcp_init();
 	while(1)
 	{
 		LwIP_Pkt_Handle();
 		LwIP_Periodic_Handle(LocalTime);
-	
+		tcp_request(&ip , &my_pcb);
 	}
 }
 

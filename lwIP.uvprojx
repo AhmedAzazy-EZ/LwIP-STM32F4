@@ -590,6 +590,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>LwIp App</GroupName>
+          <Files>
+            <File>
+              <FileName>tcp_client.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tcp_client.c</FilePath>
+            </File>
+            <File>
+              <FileName>tcp_client.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tcp_client.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>

@@ -37,6 +37,7 @@
 ".\objects\enc28j60.o"
 ".\objects\ethernetif.o"
 ".\objects\lwip.o"
+".\objects\tcp_client.o"
 ".\objects\stm32f4xx_hal.o"
 ".\objects\stm32f4xx_hal_cortex.o"
 ".\objects\stm32f4xx_hal_dma.o"
